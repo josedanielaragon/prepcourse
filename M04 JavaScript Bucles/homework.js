@@ -168,16 +168,11 @@ function esPrimo(num) {
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
    
-   if (num <= 1) {
-      return false;
-    } 
-  
-    for (let i = 2; i < num; i++) {
-      if (num % i === 0) {
-        return false;
-      } 
-     return true; 
+   if (num <= 0 || num === 1) return false;
+    for (var i = 2; i < num; i++) {
+      if (num % i === 0) return false;
     }
+  return true;
 }
 
 function esVerdadero(valor) {
